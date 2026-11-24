@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>FindIt</h1>
+        <p>Objets perdus et trouvés sur le campus</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Bienvenue sur FindIt</h2>
+            <p>
+                Retrouvez facilement les objets perdus ou signalez
+                un objet que vous avez trouvé sur le campus.
+            </p>
+
+            <button onclick="afficherFormulaire()">
+                Publier une annonce
+            </button>
+
+            <button onclick="afficherAnnonces()">
+                Voir les annonces
+            </button>
+        </section>
+
+        <section id="formulaire" class="hidden">
+            <h2>Publier une annonce</h2>
+
+            <label for="type">Type :</label>
+            <select id="type">
+                <option value="Perdu">Objet perdu</option>
+                <option value="Trouvé">Objet trouvé</option>
+            </select>
+
+            <label for="nom">Nom de l'objet :</label>
+            <input type="text" id="nom" placeholder="Ex : Portefeuille">
+
+            <label for="description">Description :</label>
+            <textarea id="description" placeholder="Décrivez l'objet"></textarea>
+
+            <label for="lieu">Lieu :</label>
+            <input type="text" id="lieu" placeholder="Ex : Bibliothèque">
+
+            <label for="date">Date :</label>
+            <input type="date" id="date">
+
+            <button onclick="ajouterAnnonce()">
+                Publier
+            </button>
+        </section>
+
+        <section id="annonces">
+            <h2>Annonces</h2>
+            <div id="liste"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
